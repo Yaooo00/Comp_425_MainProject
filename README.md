@@ -6,7 +6,7 @@ It is recommended that you use Anaconda to build a standalone Python virtual env
 
 Clone the project code:
 git clone https://github.com/open-mmlab/mmdetection3d.git
-The remaining steps follow final_code.ipynd
+\n The remaining steps follow final_code.ipynd
 
 # Data preparation
 Use the following data from the KITTI dataset ==> https://www.cvlibs.net/datasets/kitti/eval_object.php?obj_benchmark=3d (Register first)
