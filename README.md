@@ -19,8 +19,9 @@ Use the following data from the KITTI dataset ==> https://www.cvlibs.net/dataset
 
 # IMPORTANT NOTE: 
 1. To ensure that MVX-Net can be loaded and visualized correctly, the following code needs to be added at the top of this configuration file:
-import os
 
+
+import os
 os.environ['DISPLAY'] = '1'
 
 
