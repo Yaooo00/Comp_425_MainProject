@@ -22,7 +22,9 @@ Use the following data from the KITTI dataset ==> https://www.cvlibs.net/dataset
 import os
 
 os.environ['DISPLAY'] = '1'
-3. As mentioned in the REPORT, data consistency is important. Since the calibration files are internally numbered (000008), make sure that the numbering of the image, point cloud and calibration files is consistent. If using new data, rename all relevant files to the same number (e.g. 000008.xxx).
+
+
+2. As mentioned in the REPORT, data consistency is important. Since the calibration files are internally numbered (000008), make sure that the numbering of the image, point cloud and calibration files is consistent. If using new data, rename all relevant files to the same number (e.g. 000008.xxx).
 
 
 # Activate MVX-Net (Final Step)
