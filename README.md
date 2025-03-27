@@ -24,6 +24,7 @@ Ensure that your data is organized under the data/kitti directory as follows (Yo
 
 # Generate Data Index
 After preparing the data, run the following command to generate KITTI information files (in .pkl format) for subsequent training and testing:
+
 python tools/create_data.py kitti --root-path data/kitti --out-dir data/kitti --extra-tag kitti
 
 # Train 
