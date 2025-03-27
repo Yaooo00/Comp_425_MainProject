@@ -19,24 +19,8 @@ Use the following data from the KITTI dataset ==> https://www.cvlibs.net/dataset
 
 # Data Directory Structure
 Ensure that your data is organized under the data/kitti directory as follows:
-data/kitti/
-├── training/
+![image](https://github.com/user-attachments/assets/7393c9fb-980d-4e13-bd25-da2c9f5bb065)
 
-│   ├── image_2/       # Left color images (e.g., 000000.png, 000001.png, …)
-
-│   ├── velodyne/      # Velodyne point clouds (e.g., 000000.bin, 000001.bin, …)
-
-│   ├── calib/         # Calibration files (e.g., 000000.txt or converted 000000.pkl)
-
-│   └── label_2/       # Object annotation files (e.g., 000000.txt, 000001.txt, …)
-
-└── ImageSets/         # Data split files
-
-    ├── train.txt    # e.g., sample IDs 000000 ~ 000035 (36 samples)
-    
-    ├── val.txt      # e.g., sample IDs 000036 ~ 000039 (4 samples)
-    
-    └── test.txt     # e.g., sample IDs 000040 ~ 000049 (10 samples)
 
 # Generate Data Index
 After preparing the data, run the following command to generate KITTI information files (in .pkl format) for subsequent training and testing:
