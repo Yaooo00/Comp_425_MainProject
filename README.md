@@ -1,5 +1,5 @@
 # Comp_425_MainProject
-Based on OpenMMLab's mmdetection3d framework, this project implements a 3D vehicle detection system that integrates MVX-Net (Multimodal Network) and PointPillars. The project utilizes images, point clouds, and calibration files from the KITTI dataset to accurately detect and visualize vehicles (as well as targets such as pedestrians).
+This project implements a 3D vehicle detection system based on OpenMMLab's mmdetection3d framework. It leverages both MVX-Net (a multimodal network that fuses RGB images with LiDAR point clouds) and PointPillars (which converts point cloud data into pseudo-images for efficient detection) to accurately detect and visualize vehicles, as well as other targets such as pedestrians and cyclists. In addition, the project compares the performance of the two methods to provide insights for subsequent development.
 
 # Setting Up the Environment
 It is recommended that you use Anaconda to build a standalone Python virtual environment. The recommended environment configuration is as follows:
