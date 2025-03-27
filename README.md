@@ -52,6 +52,15 @@ python tools/test.py configs/mvxnet/mvxnet_fpn_dv_second_secfpn_8xb2-80e_kitti-3
 
 
 # Visualization
+IMPORTANT NOTE for Visualization:
+To ensure  MVX-Net loads and visualizes correctly, add the following code at the top of demo/multi_modality_demo.py:
+
+import os
+
+os.environ['DISPLAY'] = '1'
+
+
+
 1. MVX-Net Visualization
 To visualize the multimodal detection results (fusing image and point cloud), run:
 
