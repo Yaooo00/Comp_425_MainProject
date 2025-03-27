@@ -23,7 +23,8 @@ Use the following data from the KITTI dataset ==> https://www.cvlibs.net/dataset
 1. Left color images of object dataset (.png)
 2. Velodyne point clouds (.bin)
 3. Training labels of object data set (.txt)
-4. (.pkl) The information in the pkl file does not need to be modified.
+4. Camera calibration matrices of object data set (.txt)
+5. (.pkl) The information in the pkl file does not need to be modified.
 
 # Data Directory Structure
 Ensure that your data is organized under the data/kitti directory as follows (You need to add these files to it yourself)
