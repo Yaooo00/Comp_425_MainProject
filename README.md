@@ -28,3 +28,10 @@ python tools/create_data.py kitti --root-path data/kitti --out-dir data/kitti --
 
 # Train 
 1.  Training PointPillars
+To train PointPillars, use the corresponding configuration file: python tools/train.py pointpillars_hv_secfpn_8xb6-160e_kitti-3d-car.py
+
+2.  Training MVX-Net
+To train MVX-Net, use a configuration file such as: python tools/train.py configs/mvxnet/mvxnet_fpn_dv_second_secfpn_8xb2-80e_kitti-3d-3class.py
+
+
+
