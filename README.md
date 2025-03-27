@@ -56,6 +56,10 @@ python tools/test.py configs/pointpillars/pointpillars_hv_secfpn_8xb6-160e_kitti
 2. 4.2 Testing MVX-Net
 For MVX-Net, which fuses image and point cloud data, the recommended test command is:
 
+For the  MVX-Net .pth file, you'll need to download it yourself. 
+
+https://download.openmmlab.com/mmdetection3d/v1.1.0_models/mvxnet/mvxnet_fpn_dv_second_secfpn_8xb2-80e_kitti-3d-3class/mvxnet_fpn_dv_second_secfpn_8xb2-80e_kitti-3d-3class-8963258a.pth (you can find it from mmdetection3d\configs\mvxnet\README.md)
+
 python tools/test.py configs/mvxnet/mvxnet_fpn_dv_second_secfpn_8xb2-80e_kitti-3d-3class.py "D:\1.Concordia University\2025 Winter\COMP 425\Project\mvxnet_fpn_dv_second_secfpn_8xb2-80e_kitti-3d-3class-8963258a.pth" --task lidar_det --show --out-dir outputs\multi_modality_results --print-result
 
 
@@ -72,6 +76,10 @@ In treminal you should install mmdet3d   --> pip install -e .
 
 1. MVX-Net Visualization
 To visualize the multimodal detection results (fusing image and point cloud), run:
+
+For the  MVX-Net .pth file, you'll need to download it yourself. 
+
+https://download.openmmlab.com/mmdetection3d/v1.1.0_models/mvxnet/mvxnet_fpn_dv_second_secfpn_8xb2-80e_kitti-3d-3class/mvxnet_fpn_dv_second_secfpn_8xb2-80e_kitti-3d-3class-8963258a.pth (you can find it from mmdetection3d\configs\mvxnet\README.md)
 
 python demo/multi_modality_demo.py demo/data/kitti/000008.bin demo/data/kitti/000008.png demo/data/kitti/000008.pkl configs/mvxnet/mvxnet_fpn_dv_second_secfpn_8xb2-80e_kitti-3d-3class.py "D:\1.Concordia University\2025 Winter\COMP 425\Project\mvxnet_fpn_dv_second_secfpn_8xb2-80e_kitti-3d-3class-8963258a.pth" --show --out-dir outputs\multi_modality_results --print-result
 ![image](https://github.com/user-attachments/assets/4fa54b37-5c05-496f-8ccb-f5fc2efbf813)
