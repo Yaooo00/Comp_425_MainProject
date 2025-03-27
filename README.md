@@ -4,6 +4,11 @@ This project implements a 3D vehicle detection system based on OpenMMLab's mmdet
 # Setting Up the Environment
 It is recommended that you use Anaconda to build a standalone Python virtual environment. The recommended environment configuration is as follows:
 
+Python Version: 3.8.20 (default, Oct  3 2024, 15:19:54) [MSC v.1929 64 bit (AMD64)]
+PyTorch Version: 1.13.1
+CUDA Version: 11.7
+CUDA Can Use Or Not: True
+
 1. Clone the project code:
 git clone https://github.com/open-mmlab/mmdetection3d.git
 
