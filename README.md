@@ -75,8 +75,6 @@ import os
 
 os.environ['DISPLAY'] = '1'
 
-In treminal you should install mmdet3d   --> pip install -e .
-
 
 1. MVX-Net Visualization
 To visualize the multimodal detection results (fusing image and point cloud), run:
