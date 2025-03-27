@@ -18,7 +18,7 @@ Use the following data from the KITTI dataset ==> https://www.cvlibs.net/dataset
 4. (.pkl) The information in the pkl file does not need to be modified.
 
 # Data Directory Structure
-Ensure that your data is organized under the data/kitti directory as follows:
+Ensure that your data is organized under the data/kitti directory as follows (You need to add these files to it yourself)
 ![image](https://github.com/user-attachments/assets/7393c9fb-980d-4e13-bd25-da2c9f5bb065)
 
 
@@ -28,10 +28,36 @@ python tools/create_data.py kitti --root-path data/kitti --out-dir data/kitti --
 
 # Train 
 1.  Training PointPillars
-To train PointPillars, use the corresponding configuration file: python tools/train.py pointpillars_hv_secfpn_8xb6-160e_kitti-3d-car.py
+To train PointPillars, use the corresponding configuration file:
+
+python tools/train.py pointpillars_hv_secfpn_8xb6-160e_kitti-3d-car.py
 
 2.  Training MVX-Net
-To train MVX-Net, use a configuration file such as: python tools/train.py configs/mvxnet/mvxnet_fpn_dv_second_secfpn_8xb2-80e_kitti-3d-3class.py
+To train MVX-Net, use a configuration file such as:
+
+python tools/train.py configs/mvxnet/mvxnet_fpn_dv_second_secfpn_8xb2-80e_kitti-3d-3class.py
+
+# Testing & Evaluation
+1. Testing PointPillars
+Since PointPillars is a LiDAR-only method, use the following command (with --task lidar_det):
+
+python tools/test.py configs/pointpillars/pointpillars_hv_secfpn_8xb6-160e_kitti-3d-car.py "hv_pointpillars_secfpn_6x8_160e_kitti-3d-car_20220331_134606-d42d15ed.pth" --task lidar_det --show
+
+  
+2. 4.2 Testing MVX-Net
+For MVX-Net, which fuses image and point cloud data, the recommended test command is:
+
+python tools/test.py configs/mvxnet/mvxnet_fpn_dv_second_secfpn_8xb2-80e_kitti-3d-3class.py "D:\1.Concordia University\2025 Winter\COMP 425\Project\mvxnet_fpn_dv_second_secfpn_8xb2-80e_kitti-3d-3class-8963258a.pth" --task lidar_det --show --out-dir outputs\multi_modality_results --print-result
 
 
+# Visualization
+1. MVX-Net Visualization
+To visualize the multimodal detection results (fusing image and point cloud), run:
 
+python demo/multi_modality_demo.py demo/data/kitti/000008.bin demo/data/kitti/000008.png demo/data/kitti/000008.pkl configs/mvxnet/mvxnet_fpn_dv_second_secfpn_8xb2-80e_kitti-3d-3class.py "D:\1.Concordia University\2025 Winter\COMP 425\Project\mvxnet_fpn_dv_second_secfpn_8xb2-80e_kitti-3d-3class-8963258a.pth" --show --out-dir outputs\multi_modality_results --print-result
+
+2. PointPillars Visualization
+To visualize PointPillars' detection results on point cloud data, run:
+python demo/pcd_demo.py demo/data/kitti/000008.bin pointpillars_hv_secfpn_8xb6-160e_kitti-3d-car.py "hv_pointpillars_secfpn_6x8_160e_kitti-3d-car_20220331_134606-d42d15ed.pth" --show
+
+NOTE: Data consistency is critical in the visualization section. Ensure that the image, point cloud, calibration files, and annotation files are numbered consistently. If using new data, rename all corresponding files to the same format (e.g. 000008.xxx).
