@@ -36,6 +36,9 @@ After preparing the data, run the following command to generate KITTI informatio
 
 python tools/create_data.py kitti --root-path data/kitti --out-dir data/kitti --extra-tag kitti
 
+![image](https://github.com/user-attachments/assets/251aaf51-0094-4d79-9a09-18c873cda62f)
+
+
 # Train 
 1.  Training PointPillars
 To train PointPillars, use the corresponding configuration file:
