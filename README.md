@@ -4,10 +4,11 @@ This project implements a 3D vehicle detection system based on OpenMMLab's mmdet
 # Setting Up the Environment
 It is recommended that you use Anaconda to build a standalone Python virtual environment. The recommended environment configuration is as follows:
 
-Clone the project code:
+1. Clone the project code:
 git clone https://github.com/open-mmlab/mmdetection3d.git
 
-==> The remaining steps follow final_code.ipynd
+2. Install Dependencies:
+Please follow the instructions in the final_code.ipynb to install the required packages. Ensure that your Python, PyTorch, mmcv, mmengine, and other dependencies meet the version requirements.
 
 # Data preparation
 Use the following data from the KITTI dataset ==> https://www.cvlibs.net/datasets/kitti/eval_object.php?obj_benchmark=3d (Register first)
@@ -15,6 +16,23 @@ Use the following data from the KITTI dataset ==> https://www.cvlibs.net/dataset
 2. Velodyne point clouds (.bin)
 3. Training labels of object data set (.txt)
 4. (.pkl) The information in the pkl file does not need to be modified.
+
+# Data Directory Structure
+Ensure that your data is organized under the data/kitti directory as follows:
+data/kitti/
+├── training/
+│   ├── image_2/       # Left color images (e.g., 000000.png, 000001.png, …)
+│   ├── velodyne/      # Velodyne point clouds (e.g., 000000.bin, 000001.bin, …)
+│   ├── calib/         # Calibration files (e.g., 000000.txt or converted 000000.pkl)
+│   └── label_2/       # Object annotation files (e.g., 000000.txt, 000001.txt, …)
+└── ImageSets/         # Data split files
+    ├── train.txt    # e.g., sample IDs 000000 ~ 000035 (36 samples)
+    ├── val.txt      # e.g., sample IDs 000036 ~ 000039 (4 samples)
+    └── test.txt     # e.g., sample IDs 000040 ~ 000049 (10 samples)
+
+# Generate Data Index
+After preparing the data, run the following command to generate KITTI information files (in .pkl format) for subsequent training and testing:
+
 
 
 # IMPORTANT NOTE: 
