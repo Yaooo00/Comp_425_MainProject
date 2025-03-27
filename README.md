@@ -53,21 +53,24 @@ python tools/test.py configs/mvxnet/mvxnet_fpn_dv_second_secfpn_8xb2-80e_kitti-3
 
 # Visualization
 IMPORTANT NOTE for Visualization:
-To ensure  MVX-Net loads and visualizes correctly, add the following code at the top of demo/multi_modality_demo.py:
+To ensure loads and visualizes correctly, add the following code at the top of demo/multi_modality_demo.py and demo/pcd_demo.py:
 
 import os
 
 os.environ['DISPLAY'] = '1'
 
+In treminal you should install mmdet3d   --> pip install -e .
 
 
 1. MVX-Net Visualization
 To visualize the multimodal detection results (fusing image and point cloud), run:
 
 python demo/multi_modality_demo.py demo/data/kitti/000008.bin demo/data/kitti/000008.png demo/data/kitti/000008.pkl configs/mvxnet/mvxnet_fpn_dv_second_secfpn_8xb2-80e_kitti-3d-3class.py "D:\1.Concordia University\2025 Winter\COMP 425\Project\mvxnet_fpn_dv_second_secfpn_8xb2-80e_kitti-3d-3class-8963258a.pth" --show --out-dir outputs\multi_modality_results --print-result
+![image](https://github.com/user-attachments/assets/4fa54b37-5c05-496f-8ccb-f5fc2efbf813)
 
 2. PointPillars Visualization
 To visualize PointPillars' detection results on point cloud data, run:
 python demo/pcd_demo.py demo/data/kitti/000008.bin pointpillars_hv_secfpn_8xb6-160e_kitti-3d-car.py "hv_pointpillars_secfpn_6x8_160e_kitti-3d-car_20220331_134606-d42d15ed.pth" --show
+![image](https://github.com/user-attachments/assets/d88fe351-8e26-4c73-aab0-a4b119b6f000)
 
 NOTE: Data consistency is critical in the visualization section. Ensure that the image, point cloud, calibration files, and annotation files are numbered consistently. If using new data, rename all corresponding files to the same format (e.g. 000008.xxx).
