@@ -41,7 +41,9 @@ After preparing the data, run the following command to generate KITTI informatio
 
 python tools/create_data.py kitti --root-path data/kitti --out-dir data/kitti --extra-tag kitti
 
-![image](https://github.com/user-attachments/assets/251aaf51-0094-4d79-9a09-18c873cda62f)![image](https://github.com/user-attachments/assets/ab93f7b1-1cfb-475b-ad3b-40ef3e96da51)![image](https://github.com/user-attachments/assets/53eb5119-338d-4534-b81f-d1083fd4ce67)
+![image](https://github.com/user-attachments/assets/251aaf51-0094-4d79-9a09-18c873cda62f)
+![image](https://github.com/user-attachments/assets/ab93f7b1-1cfb-475b-ad3b-40ef3e96da51)
+![image](https://github.com/user-attachments/assets/53eb5119-338d-4534-b81f-d1083fd4ce67)
 
 
 
