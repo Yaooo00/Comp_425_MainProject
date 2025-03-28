@@ -51,13 +51,30 @@ To train MVX-Net, use a configuration file such as:
 python tools/train.py configs/mvxnet/mvxnet_fpn_dv_second_secfpn_8xb2-80e_kitti-3d-3class.py
 
 # Testing & Evaluation
+
+The evaluation uses KITTI’s official 3D Average Precision (AP) metric with an IoU threshold of 0.7 for Car targets. The following four metrics are computed:
+
+bbox AP: 2D bounding box detection accuracy on the image plane.
+
+BEV AP: Accuracy after projecting 3D bounding boxes to a bird's-eye view.
+
+3D AP: Accuracy of complete 3D bounding boxes.
+
+AOS: Average orientation similarity, considering target orientation consistency.
+
+Two evaluation methods are used:
+
+AP11: Calculated using 11 fixed sampling points (Recall from 0 to 1 in steps of 0.1).
+
+AP40: Calculated using 40 sampling points (finer steps for a more detailed evaluation).
+
 1. Testing PointPillars
 Since PointPillars is a LiDAR-only method, use the following command (with --task lidar_det):
 
 python tools/test.py configs/pointpillars/pointpillars_hv_secfpn_8xb6-160e_kitti-3d-car.py "hv_pointpillars_secfpn_6x8_160e_kitti-3d-car_20220331_134606-d42d15ed.pth" --task lidar_det --show
 
   
-2. 4.2 Testing MVX-Net
+2. Testing MVX-Net
 For MVX-Net, which fuses image and point cloud data, the recommended test command is:
 
 For the  MVX-Net .pth file, you'll need to download it yourself. 
