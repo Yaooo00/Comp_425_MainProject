@@ -30,6 +30,10 @@ Use the following data from the KITTI dataset ==> https://www.cvlibs.net/dataset
 Ensure that your data is organized under the data/kitti directory as follows (You need to add these files to it yourself)
 ![image](https://github.com/user-attachments/assets/7393c9fb-980d-4e13-bd25-da2c9f5bb065)
 
+NOTE: Add the above dataset from KITTI to it according to your computer's performance and your preferences.
+
+NOTE: In addition, you need to fill in the txt file in ImageSets according to your personal preferences and goals.
+
 
 # Generate Data Index
 After preparing the data, run the following command to generate KITTI information files (in .pkl format) for subsequent training and testing:
