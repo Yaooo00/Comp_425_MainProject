@@ -33,8 +33,7 @@ Ensure that your data is organized under the data/kitti directory as follows (Yo
 NOTE: Add the above dataset from KITTI to it according to your computer's performance and your preferences.
 
 NOTE: In addition, you need to fill in the txt file in ImageSets according to your personal preferences and goals.
-![image](https://github.com/user-attachments/assets/386a34b4-7190-484b-8f1f-db166847cf6d)![image](https://github.com/user-attachments/assets/ab93f7b1-1cfb-475b-ad3b-40ef3e96da51)
-![image](https://github.com/user-attachments/assets/53eb5119-338d-4534-b81f-d1083fd4ce67)
+![image](https://github.com/user-attachments/assets/386a34b4-7190-484b-8f1f-db166847cf6d) ![image](https://github.com/user-attachments/assets/ab93f7b1-1cfb-475b-ad3b-40ef3e96da51) ![image](https://github.com/user-attachments/assets/53eb5119-338d-4534-b81f-d1083fd4ce67)
 
 
 
